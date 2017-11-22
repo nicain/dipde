@@ -1,8 +1,7 @@
-doc/build
-conda/build
+.history
+.vscode
 *~
 .idea
-nicholasc
 .cache
 update.sh
 doc

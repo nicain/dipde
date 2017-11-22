@@ -5,12 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Examples (dipde.examples) &#8212; DiPDE  documentation</title>
-    
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -29,14 +26,11 @@
     <link rel="next" title="Core functionality (dipde.internals)" href="dipde.internals.html" />
     <link rel="prev" title="Packages" href="dipde.html" />
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 
   </head>
-  <body>
-  
+  <body>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -47,7 +41,7 @@
 <span id="ref-examples"></span><h1>Examples (dipde.examples)<a class="headerlink" href="#examples-dipde-examples" title="Permalink to this headline">¶</a></h1>
 <p>These quick-start examples demonstrate the configuration, simulation, and plotting of simple dipde networks.</p>
 <p>A preamble imports the classes necessary for simulation:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">dipde.internals.internalpopulation</span> <span class="kn">import</span> <span class="n">InternalPopulation</span>
 <span class="kn">from</span> <span class="nn">dipde.internals.externalpopulation</span> <span class="kn">import</span> <span class="n">ExternalPopulation</span>
 <span class="kn">from</span> <span class="nn">dipde.internals.simulation</span> <span class="kn">import</span> <span class="n">Simulation</span>
@@ -55,12 +49,12 @@
 </pre></div>
 </div>
 <p>Each of the example simulations below use the same general settings:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Settings:</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Settings:</span>
 <span class="n">t0</span> <span class="o">=</span> <span class="mf">0.</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="o">.</span><span class="mo">0001</span>
 <span class="n">dv</span> <span class="o">=</span> <span class="o">.</span><span class="mo">0001</span>
 <span class="n">tf</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
-<span class="n">update_method</span> <span class="o">=</span> <span class="s1">&#39;approx&#39;</span>
+<span class="n">update_method</span> <span class="o">=</span> <span class="s">&#39;approx&#39;</span>
 <span class="n">approx_order</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-14</span>
 <span class="n">verbose</span> <span class="o">=</span> <span class="bp">True</span>
@@ -123,7 +117,7 @@ Discrete distributions can be specified directly, and will be used exactly.</p>
 <p>In general, the special case of exponentially distributed synaptic weights admits an analytical steady-state firing rate solution (see Richardson and Swarbrick, 2010 <a class="footnote-reference" href="#id5" id="id2">[2]</a>, and Iyer et al. 2014 <a class="footnote-reference" href="#id6" id="id3">[3]</a>).
 The figure above includes the mean firing rate computed for the internal population, as well as a ‘*’ indicating a semi-analytic prediction (~8.669 Hz) of the steady-state firing rate for the model.
 This steady state prediction is computed with the code below, plotted above with an ‘*’.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.integrate</span> <span class="kn">as</span> <span class="nn">spint</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">scipy.integrate</span> <span class="kn">as</span> <span class="nn">spint</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="n">R_e</span> <span class="o">=</span> <span class="mi">100</span>
@@ -132,7 +126,7 @@ This steady state prediction is computed with the code below, plotted above with
 <span class="n">v_th</span> <span class="o">=</span> <span class="o">.</span><span class="mo">02</span>
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">tau</span><span class="o">*</span><span class="n">R_e</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">v_th</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a_e</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
 <span class="n">y</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">spint</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="n">a_e</span><span class="p">)</span>
-<span class="n">steady_state_prediction</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">tau</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>    <span class="c1"># &gt;&gt;&gt; 8.6687760498</span>
+<span class="n">steady_state_prediction</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">tau</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>    <span class="c"># &gt;&gt;&gt; 8.6687760498</span>
 </pre></div>
 </div>
 <table class="docutils footnote" frame="void" id="id4" rules="none">
@@ -209,8 +203,8 @@ This steady state prediction is computed with the code below, plotted above with
       &copy;2017, Nicholas Cain.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
       
       |
       <a href="_sources/dipde.examples.rst.txt"
