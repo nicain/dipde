@@ -4,7 +4,11 @@ default_context:
   open_source_license: Allen Institute Software License
   project_name: dipde
   project_namespace: aibs
-  project_short_description: DiPDE (dipde) is a simulation platform for numerically solving the time evolution of coupled networks of neuronal populations. Instead of solving the subthreshold dynamics of individual model leaky-integrate-and-fire (LIF) neurons, dipde models the voltage distribution of a population of neurons with a single population density equation.
+  project_short_description: DiPDE (dipde) is a simulation platform for numerically
+    solving the time evolution of coupled networks of neuronal populations. Instead
+    of solving the subthreshold dynamics of individual model leaky-integrate-and-fire
+    (LIF) neurons, dipde models the voltage distribution of a population of neurons
+    with a single population density equation.
   project_slug: dipde
   stash_url: http://stash.corp.alleninstitute.org/scm/~nicholasc/aibs.dipde
   user_name: nicholasc

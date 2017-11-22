@@ -13,6 +13,12 @@
 # You should have received a copy of the GNU General Public License
 # along with dipde.  If not, see <http://www.gnu.org/licenses/>.
 
+# -*- coding: utf-8 -*-
+
+"""Top-level package for dipde."""
+
+__author__ = """Nicholas Cain"""
+__email__ = 'nicholasc@alleninstitute.org'
 __version__ = '0.2.1'
 
 import logging
@@ -24,4 +30,3 @@ from internals.network import Network
 from internals.simulation import Simulation
 from internals.connection import Connection
 from internals.simulationconfiguration import SimulationConfiguration
-

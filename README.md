@@ -1,3 +1,5 @@
+# dipde
+
 [![Build Status](https://travis-ci.org/AllenInstitute/dipde.svg?branch=master)](https://travis-ci.org/AllenInstitute/dipde)
 
 DiPDE (dipde) is a simulation platform for numerically solving the time evolution of coupled networks of neuronal populations.

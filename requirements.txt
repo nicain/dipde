@@ -1,4 +1,4 @@
-coverage==4.2
+argschema>=1.15.12
 cycler==0.10.0
 dipde==0.2.0
 matplotlib==1.5.1
@@ -8,8 +8,6 @@ numpy==1.10.4
 pandas==0.16.2
 py==1.4.31
 pyparsing==2.1.4
-pytest==2.8.5
-pytest-cov==2.2.1
 python-dateutil==2.6.0
 pytz==2016.7
 pyzmq==15.2.0
