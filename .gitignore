@@ -1,3 +1,5 @@
+.history
+.tox
 doc/build
 conda/build
 *~
