@@ -1,3 +1,5 @@
+
+
 PROJECTNAME = dipde
 VERSION = 0
 RELEASE = 1
@@ -37,6 +39,7 @@ doc: FORCE
 	sed -ie "s/\/external_assets/${STATIC}\/external_assets/g" doc/_static/external_assets/javascript/portal.js
 	cd doc && make html || true
 	cp doc_template/.nojekyll doc/_build/html
+	ln -r -s doc/_build/html/_static doc/_build/html/auto_examples
 	
 
 FORCE:

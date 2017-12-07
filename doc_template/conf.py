@@ -34,9 +34,18 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.viewcode',
+    'sphinx_gallery.gen_gallery',
     'numpydoc',
     #'sphinxcontrib.napoleon'
 ]
+
+sphinx_gallery_conf = {
+    # path to your examples scripts
+    'examples_dirs' : '../dipde/examples',
+    # path where to save gallery generated examples
+    'gallery_dirs'  : 'auto_examples',
+    'filename_pattern': '/',
+    'backreferences_dir': False}
 
 numpydoc_show_class_members = False
 

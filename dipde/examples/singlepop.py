@@ -1,3 +1,10 @@
+"""
+Singlepop
+=================================
+
+A simple example
+"""
+
 # Copyright 2013 Allen Institute
 # This file is part of dipde
 # dipde is free software: you can redistribute it and/or modify
@@ -65,8 +72,6 @@ def example(show=False, save=False):
 
         if save == True: plt.savefig('./singlepop.png')
 
-        window = fig.canvas.manager.window  # pragma: no cover
-        window.raise_()                     # pragma: no cover
         plt.show()                          # pragma: no cover
           
 

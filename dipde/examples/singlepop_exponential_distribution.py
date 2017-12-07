@@ -1,3 +1,10 @@
+"""
+Singlepop Exponential
+=================================
+
+A simple example
+"""
+
 # Copyright 2013 Allen Institute
 # This file is part of dipde
 # dipde is free software: you can redistribute it and/or modify
